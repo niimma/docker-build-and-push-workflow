@@ -1,0 +1,35 @@
+name: 'Docker Build and Push Composite'
+description: 'Composite action wrapping the reusable workflow'
+runs:
+  using: 'composite'
+  steps:
+    - name: Call reusable workflow
+      uses: ./.github/workflows/build-and-push.yml
+      with:
+        registry: ${{ inputs.registry }}
+        username: ${{ inputs.username }}
+        image_name: ${{ inputs.image_name }}
+        tags: ${{ inputs.tags }}
+        context: ${{ inputs.context }}
+        dockerfile: ${{ inputs.dockerfile }}
+      secrets:
+        REGISTRY_TOKEN: ${{ inputs.REGISTRY_TOKEN }}
+
+inputs:
+  registry:
+    required: true
+  username:
+    required: true
+  image_name:
+    required: true
+  tags:
+    required: false
+    default: 'latest'
+  context:
+    required: false
+    default: '.'
+  dockerfile:
+    required: false
+    default: 'Dockerfile'
+
+outputs: {}
