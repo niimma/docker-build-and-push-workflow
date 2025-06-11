@@ -1,14 +1,3 @@
-
----
-
-### 6. `CHANGELOG.md`
-
-```markdown
-# Changelog
-
-## [1.0.0] – YYYY-MM-DD
-### Added
-- Initial release of reusable Docker build-and-push workflow
 MIT License
 
 Copyright (c) 2025 niimma
@@ -30,3 +19,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
